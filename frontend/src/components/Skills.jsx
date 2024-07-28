@@ -27,6 +27,7 @@ const Skills = () => {
       description: "Proficient in Web3 development, including integration with blockchain networks and decentralized finance (DeFi) applications.",
       iconSrc: web3
     },
+    
     {
       title: "ReactJS",
       description: "Expertise in React.js for building interactive user interfaces (UIs) and single-page applications (SPAs). Skilled in state management with Context API and Redux, and proficient in using React Hooks for functional components.",

@@ -24,7 +24,7 @@ const Projects = () => {
   // Sample project data for three different projects
   const projects = [
     {
-      title: "Simon Game",
+      title: "Decentralised Voting System",
       description: "A memory game with repeated sequences of lights and sounds.",
       imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0V0uD1soCxe6dOzdENCdD8HhLkqzF4xuA-g&s",
       author: "Vinayak Kamboj"
