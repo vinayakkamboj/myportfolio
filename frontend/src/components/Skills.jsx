@@ -14,7 +14,7 @@ const MotionHeading = motion(Heading);
 const MotionBox = motion(Box);
 
 const Skills = () => {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
+  const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.1 });
 
   const skills = [
     {
@@ -27,7 +27,6 @@ const Skills = () => {
       description: "Proficient in Web3 development, including integration with blockchain networks and decentralized finance (DeFi) applications.",
       iconSrc: web3
     },
-    
     {
       title: "ReactJS",
       description: "Expertise in React.js for building interactive user interfaces (UIs) and single-page applications (SPAs). Skilled in state management with Context API and Redux, and proficient in using React Hooks for functional components.",
@@ -62,8 +61,8 @@ const Skills = () => {
           as="h1" 
           mb={6} 
           color="black" 
-          fontSize={{ base: "5xl", md: "6xl", lg: "6xl" }}
-          initial={{ opacity: 0, y: -100}}
+          fontSize={{ base: "4xl", md: "5xl", lg: "6xl" }}
+          initial={{ opacity: 0, y: -100 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
@@ -73,7 +72,7 @@ const Skills = () => {
           templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }}
           gap={6}
           justifyContent="start"
-          pt={8} // Added padding top for spacing from Skills heading
+          pt={8}
         >
           {skills.map((skill, index) => (
             <StyledSkillItem
@@ -93,14 +92,17 @@ const StyledSkillItem = ({ title, description, iconSrc }) => {
   return (
     <MotionBox
       bg="white"
-      p={8}
+      p={6} // Reduced padding for smaller devices
       textAlign="left"
       boxShadow="lg"
       rounded="lg"
-      mb={4} // Added margin between skill items
+      mb={4}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       transition={{ duration: 0.3 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 20 }}
     >
       <img
         src={iconSrc}
@@ -108,7 +110,7 @@ const StyledSkillItem = ({ title, description, iconSrc }) => {
         style={{ width: '50px', height: '50px', marginBottom: '1rem' }}
       />
       <Text fontSize="xl" fontWeight="bold" mb={2}>{title}</Text>
-      <Text fontSize="lg" mt={2}>{description}</Text> {/* Added margin from top */}
+      <Text fontSize="lg" mt={2}>{description}</Text>
     </MotionBox>
   );
 };
