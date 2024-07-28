@@ -3,6 +3,9 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  define: {
+    API_URL: JSON.stringify('https://myportfolio-api-blue.vercel.app'),
+  },
   server: {
     proxy: {
       '/api': {

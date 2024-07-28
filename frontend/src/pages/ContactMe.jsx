@@ -59,7 +59,7 @@ const ContactMe = () => {
         setLoading(true); // Show spinner
         setShowSpinner(true); // Show spinner only for the initial success message
 
-        await axios.post('http://localhost:5000/contact', formData);
+        await axios.post(`${API_URL}/contact`, formData);
 
         setTimeout(() => {
           showAlert(
