@@ -17,7 +17,7 @@ const Navbar = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
 
   return (
-    <Box bg="#23153c" p={4}>
+    <Box bg="transparent" p={4}>
       <Flex justify="space-between" align="center" maxW="1200px" mx="auto">
         {isMobile ? (
           <Menu>

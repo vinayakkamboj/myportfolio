@@ -14,6 +14,7 @@ import {
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import axios from 'axios';
+import VantaBackground from '../components/VantaBackground';
 
 const ContactMe = () => {
   const toast = useToast();
@@ -115,7 +116,6 @@ const ContactMe = () => {
           left="0"
           width="100vw"
           height="100vh"
-          backgroundColor="rgba(0, 0, 0, 0.5)"
           zIndex="9999"
         >
           <motion.div
@@ -140,7 +140,7 @@ const ContactMe = () => {
         columns={{ base: 1, md: 2 }}
         spacing={{ base: 10, lg: 32 }}
         py={{ base: 10, sm: 20, lg: 32 }}
-        mb={4}
+        mb={-1}
         minH="calc(100vh - 150px)"
         mt={0}
       >
@@ -253,10 +253,10 @@ const ContactMe = () => {
               <Button
                 type="submit"
                 fontFamily="heading"
-                bg="#23153c"
+                bg="#002222"
                 color="white"
                 _hover={{
-                  bg: '#5b1832',
+                  bg: '#384029',
                   boxShadow: 'xl',
                 }}
                 disabled={submitDisabled} // Disable button based on submitDisabled state

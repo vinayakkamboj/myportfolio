@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Heading, Text, Container, Center, Button } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+import Projects from '../components/Experience';
+import Skills from '../components/Skills';
 
 const Home = () => {
   const introHeading = "Welcome to my Portfolio";
@@ -17,7 +19,8 @@ const Home = () => {
   }, [text]);
 
   return (
-    <Center minH="calc(100vh - 150px)" bg="transparent">
+    <div>
+      <Center minH="calc(100vh - 150px)" bg="transparent">
       <Container maxW="container.lg" py={8} textAlign="left">
         <motion.div
           initial={{ opacity: 0 }}
@@ -46,6 +49,9 @@ const Home = () => {
         </motion.div>
       </Container>
     </Center>
+    <Skills />
+    <Projects />
+    </div>
   );
 };
 

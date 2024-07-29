@@ -5,10 +5,10 @@ const Footer = () => {
   return (
     <Flex
       w="full"
-      bg="#23153c"
+      bg="#002222"
       p={50}
       alignItems="center"
-      justifyContent="center"
+      justifyContent="space-between"
     >
       <Flex
         w="full"
@@ -21,7 +21,7 @@ const Footer = () => {
         justify="space-between"
         px="0"
         py="0"
-        bg="transparent"
+        bg="#002222"
       >
         
 

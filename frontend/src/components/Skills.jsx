@@ -61,8 +61,8 @@ const Skills = () => {
           as="h1" 
           mb={6} 
           color="black" 
-          fontSize={{ base: "4xl", md: "5xl", lg: "6xl" }}
-          initial={{ opacity: 0, y: -100 }}
+          fontSize={{ base: "5xl", md: "6xl", lg: "6xl" }}
+          initial={{ opacity: 0, y: -25 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
@@ -100,7 +100,7 @@ const StyledSkillItem = ({ title, description, iconSrc }) => {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       transition={{ duration: 0.3 }}
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
     >

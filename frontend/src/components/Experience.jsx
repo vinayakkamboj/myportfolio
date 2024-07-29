@@ -49,9 +49,10 @@ const Projects = () => {
         <MotionHeading 
           as="h1" 
           mb={8} 
+          mt={3}
           color="black" 
           fontSize={{ base: "5xl", md: "6xl", lg: "6xl" }}
-          initial={{ opacity: 0, y: -100 }}
+          initial={{ opacity: 0, y: -25 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >

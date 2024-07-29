@@ -8,7 +8,7 @@ const VantaBackground = () => {
     const initializeEffect = async () => {
       if (window.VANTA && !vantaEffect) {
         const VANTA = window.VANTA;
-        vantaEffect = VANTA.NET({
+        vantaEffect = VANTA.TOPOLOGY({
           el: vantaRef.current,
           mouseControls: true,
           touchControls: true,
@@ -17,9 +17,7 @@ const VantaBackground = () => {
           minWidth: 200.00,
           scale: 1.00,
           scaleMobile: 1.00,
-          color: 0x4a1221,
-        //   backgroundColor: 0xf0f18,
-          showDots: false
+          color: 0x424832
         });
       }
     };
